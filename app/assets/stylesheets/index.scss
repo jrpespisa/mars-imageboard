@@ -5,14 +5,26 @@ h1 {
   text-align: center;
 }
 
-ul {
+.rover-body {
   margin: auto;
   text-align: center;
-  
-  .rover-title {
-    display: inline-block;
-    list-style-type: none;
-    padding: 10px;
-  }
+}
 
+.rover-wrapper {
+  display: inline-block;
+  text-align: center;
+  padding: 100px 50px 0;
+}
+
+.rover-image {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.rover-title {
+  margin: auto;
+  text-align: center;
+  display: inline-block;
+  list-style-type: none;
+  padding: 10px;
 }

@@ -1,9 +1,12 @@
 <h1>Mars Imageboard</h1>
 
-<ul>
+<div class="rover-body">
   <% @rovers.each do |rover| %>
+  <div class="rover-wrapper">
+    <li class="rover-image"><%= image_tag "#{rover.image_url}" %></li>
     <li class="rover-title">
-      <%= link_to "#{rover.name} ", rover_path(rover) %> 
+      <%= link_to "#{rover.name} ", rover_path(rover) %>
     </li>
+  </div>
   <% end %>
-<ul>
+</div>
