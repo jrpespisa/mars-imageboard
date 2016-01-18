@@ -13,6 +13,20 @@
 # ]
 
 
-Rover.create(image_url: "Spirit_rover.jpg", name: "Spirit", description: "Spirit description")
-Rover.create(image_url: "Opportunity_rover.jpg", name: "Opportunity", description: "Opportunity description")
-Rover.create(image_url: "Curiosity_rover.png", name: "Curiosity", description: "Curiosity description")
+Rover.create(
+  image_url: "Spirit_rover.jpg",
+  name: "Spirit",
+  description: "Spirit description"
+)
+
+Rover.create(
+  image_url: "Opportunity_rover.jpg",
+  name: "Opportunity",
+  description: "Opportunity description"
+)
+
+Rover.create(
+  image_url: "Curiosity_rover.png",
+  name: "Curiosity",
+  description: "Curiosity description"
+)
