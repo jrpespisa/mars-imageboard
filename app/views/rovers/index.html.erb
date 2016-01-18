@@ -1,0 +1,9 @@
+<h1>Mars Imageboard</h1>
+
+<ul>
+  <% @rovers.each do |rover| %>
+    <li class="rover-title">
+      <%= link_to "#{rover.name} ", rover_path(rover) %> 
+    </li>
+  <% end %>
+<ul>
