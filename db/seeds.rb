@@ -12,12 +12,21 @@
 #   Rover.create(name: "Curiosity", description: "Curiosity description")
 # ]
 
-rover_info = {
-  "Spirit" => "Spirit description",
-  "Opportunity" => "Opportunity description",
-  "Curiosity" => "Curiosity description"
-}
 
-rover_info.each do |key, value|
-  Rover.create(name: "#{key}", description: "#{value}")
-end
+Rover.create(
+  image_url: "Spirit_rover.jpg",
+  name: "Spirit",
+  description: "Spirit description"
+)
+
+Rover.create(
+  image_url: "Opportunity_rover.jpg",
+  name: "Opportunity",
+  description: "Opportunity description"
+)
+
+Rover.create(
+  image_url: "Curiosity_rover.png",
+  name: "Curiosity",
+  description: "Curiosity description"
+)
