@@ -1,2 +1,7 @@
 <h1><%= @rover.name %></h1>
 <p class="rover-description"><%= @rover.description %></p>
+<% @images.each do |image| %>
+  <%= image.name %>
+  <%= image.description %>
+  <p>Comments:</p>
+<% end %>

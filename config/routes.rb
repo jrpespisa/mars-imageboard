@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
   root "rovers#index"
-  resources :rovers, only: [:index, :show]
+  resources :rovers do
+    resources :images, only: [:show]
+  end
 end

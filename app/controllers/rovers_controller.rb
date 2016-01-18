@@ -5,5 +5,6 @@ class RoversController < ApplicationController
 
   def show
     @rover = Rover.find(params[:id])
+    @images = @rover.images
   end
 end

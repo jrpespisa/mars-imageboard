@@ -1,6 +1,6 @@
 require "rails_helper"
 
-feature "user views index page" do
+feature "user views rover show page and sees images belonging to that rover" do
 
   let(:rover1) { FactoryGirl.create(:rover, name: "Rover_1") }
   let(:rover2) { FactoryGirl.create(:rover, name: "Rover_2") }
@@ -17,21 +17,14 @@ feature "user views index page" do
     image1
     image2
     image3
-  end
-
-  scenario "user visits index page and sees title and rover descriptions" do
-    visit "/"
-
-    expect(page).to have_content "Mars Imageboard"
-    expect(page).to have_content "Rover_1"
-    expect(page).to have_content "Rover_2"
-    expect(page).to have_content "Rover_3"
-  end
-  scenario "user clicks on a rover's name and is taken to it's show page" do
     visit "/"
     click_on "Rover_1"
+  end
 
-    expect(page).to have_content "This rover was launched in July of 2003 and
-    has been operational on the red planet ever since."
+  scenario "user visits show page and sees links to images" do
+    expect(page).to have_content "Terra Meridiani"
+  end
+  scenario "user clicks on image and is taken to the image show page" do
+    expect(page).to have_content "Comments:"
   end
 end
