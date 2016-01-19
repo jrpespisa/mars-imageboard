@@ -5,7 +5,6 @@
   <% @images.each do |image| %>
   <div class="image-wrapper">
   <li class="image"><%= image_tag("#{image.image}") %></li>
-    <li class="image-name"><%= image.name %></li>
     <li class="image-description"><%= image.description %></li>
   </div>
   <% end %>
