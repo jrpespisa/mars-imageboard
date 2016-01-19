@@ -4,3 +4,20 @@
   margin: auto;
   text-align: center;
 }
+
+.image-wrapper {
+  display: inline-block;
+  padding: 20px 5px 0;
+}
+
+.image-name,
+.image-description {
+  list-style-type: none;
+  text-align: center;
+}
+
+.image {
+  max-width: 100px;
+  max-height: 100px;
+  list-style-type: none;
+}
