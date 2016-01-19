@@ -3,4 +3,28 @@
 .rover-description {
   margin: auto;
   text-align: center;
+  width: 70%;
+}
+
+.image-body {
+  text-align: center;
+}
+
+.image-wrapper {
+  display: inline-block;
+  align-content: center;
+  padding: 20px 20px 0;
+}
+
+.image-name,
+.image-description {
+  list-style-type: none;
+  text-align: center;
+}
+
+.image {
+  max-width: 100px;
+  max-height: 100px;
+  margin: auto;
+  list-style-type: none;
 }
