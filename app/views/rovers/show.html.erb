@@ -4,7 +4,7 @@
 <div class="image-body">
   <% @images.each do |image| %>
   <div class="image-wrapper">
-  <li class="image"><%= image_tag("#{image.image}") %></li>
+  <li class="image"><%= image_tag "#{image.image}" %></li>
     <li class="image-description"><%= image.description %></li>
   </div>
   <% end %>
