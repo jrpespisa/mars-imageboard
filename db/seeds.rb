@@ -1,13 +1,5 @@
 require_relative "../lib/seeder.rb"
 
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
 Rover.create(
   image_url: "Spirit_rover.jpg",
   name: "Spirit",
@@ -35,19 +27,6 @@ Rover.create(
   analytical equipment of any rover sent to the red planet."
 )
 
-# counter = 1
-# key = ENV["API_KEY"]
-# 20.times do
-#   uri = URI("https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&page=#{counter}&api_key=#{key}")
-#   response = Net::HTTP.get_response(uri)
-#   curiosity_info = JSON.parse(response.body)
-#   curiosity_photo = curiosity_info["photos"][0]["img_src"]
-#   curiosity_name = curiosity_info["photos"][0]["rover"]["name"]
-#   curiosity_description = curiosity_info["photos"][0]["camera"]["full_name"]
-#   Image.create(image: "#{curiosity_photo}", name: "#{curiosity_name}", description: "#{curiosity_description}", rover_id: 3 )
-#   counter += 1
-# end
-
 image_counter = 0
 page_counter = 1
 8.times do
@@ -63,17 +42,3 @@ page_counter = 1
     image_counter += 3
   end
 end
-
-# # counter = 1
-# 10.times do
-#   seeder = Seeder.new("Spirit", counter)
-#   seeder.add_image
-#   # counter += 1
-# end
-#
-# # counter = 1
-# 6.times do
-#   seeder = Seeder.new("Opportunity", counter)
-#   seeder.add_image
-#   # counter += 1
-# end
