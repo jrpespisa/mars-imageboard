@@ -1,13 +1,20 @@
 @import "foundation_and_overrides";
 
+.page-guide {
+  padding-top: 25px;
+}
+
 .rover-description {
   margin: auto;
   text-align: center;
   width: 70%;
 }
 
+.page-guide,
 .image-body {
   text-align: center;
+  margin: auto;
+  max-width: 50%
 }
 
 .image-wrapper {

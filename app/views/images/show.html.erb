@@ -1,2 +1,3 @@
-<h1><%= @image.name %></h1>
-<p>Comments:</p>
+<h4 class="image-title">Photo taken by <%= @image.name %> with the <%= @image.description %> </h4>
+<div class="full-size-image"> <%= image_tag ("#{@image.image}") %> </div>
+<p class="comments">Comments:</p>
