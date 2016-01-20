@@ -1,3 +1,4 @@
+<div class="return"> <%= link_to "Back to #{@image.rover.name} images", rover_path(@image.rover) %> </div>
 <h4 class="image-title">Photo taken by <%= @image.name %> with the <%= @image.description %> </h4>
 <div class="full-size-image"> <%= image_tag ("#{@image.image}") %> </div>
 <p class="comments">Comments:</p>

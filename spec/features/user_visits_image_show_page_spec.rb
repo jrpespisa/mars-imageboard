@@ -22,7 +22,6 @@ feature "user views index page" do
   end
   scenario "user clicks on image and is taken to new show page" do
     page.first(".link").click
-    save_and_open_page
 
     expect(page).to have_content "Comments:"
   end

@@ -22,9 +22,6 @@ feature "user views rover show page and sees images belonging to that rover" do
   end
 
   scenario "user visits show page and sees links to images" do
-    expect(page).to have_content "Terra Meridiani"
-  end
-  scenario "user clicks on image and is taken to the image show page" do
-    expect(page).to have_content "North-facing view of Terra Meridiani"
+    expect(page).to have_css(".link")
   end
 end
