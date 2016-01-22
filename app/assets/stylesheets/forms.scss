@@ -1,0 +1,21 @@
+@import "foundation_and_overrides";
+
+h2 {
+  text-align: center;
+}
+
+.form-actions,
+.form-inputs {
+  width: 70%;
+  margin: auto;
+  padding: 10px;
+}
+
+.form-inputs {
+  border: 2px solid orange;
+  border-radius: 20px;
+}
+
+.form-actions {
+  text-align: center;
+}
