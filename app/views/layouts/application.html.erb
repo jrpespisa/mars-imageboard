@@ -25,17 +25,24 @@
 
       <section class="top-bar-section">
         <ul class="right">
-          <li class="active"><a href="#">Sign in</a></li>
+          <% if user_signed_in? %>
           <li class="has-dropdown">
-            <a href="#">-Username-</a>
+          <a href="#"> <%= current_user.first_name %> <%= current_user.last_name %> </a>
             <ul class="dropdown">
-              <li><a href="#">Account</a></li>
-              <li class="active"><a href="#">Sign Out</a></li>
+              <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+              <li class="active"><%= link_to "Sign Out", destroy_user_session_path, :method => :delete %></li>
             </ul>
           </li>
+          <% else %>
+          <li class="active"><%= link_to "Sign In", new_user_session_path %></li>
+          <li class="active"><%= link_to "Sign Up", new_user_registration_path %></li>
+          <% end %>
         </ul>
       </section>
     </nav>
+
+      <div class="notice"><%= flash[:notice] %></div>
+      <div class="alert"><%= flash[:alert] %></div>
 
     <%= yield %>
 

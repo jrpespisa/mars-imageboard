@@ -25,6 +25,10 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'foundation-rails'
 
+gem 'simple_form'
+
+gem 'devise'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -40,6 +44,7 @@ group :development, :test do
   gem 'capybara'
   gem 'launchy'
   gem 'shoulda'
+  gem 'quiet_assets'
   gem "factory_girl_rails", "~> 4.0"
   gem 'valid_attribute'
   gem 'byebug'
