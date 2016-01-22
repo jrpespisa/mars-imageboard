@@ -23,6 +23,6 @@ feature "user views index page" do
   scenario "user clicks on image and is taken to new show page" do
     page.first(".link").click
 
-    expect(page).to have_content "Comments:"
+    expect(page).to have_content "North-facing view of Terra Meridiani"
   end
 end

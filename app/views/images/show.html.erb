@@ -1,4 +1,26 @@
 <div class="return"> <%= link_to "Back to #{@image.rover.name} images", rover_path(@image.rover) %> </div>
 <h4 class="image-title">Photo taken by <%= @image.name %> with the <%= @image.description %> </h4>
 <div class="full-size-image"> <%= image_tag ("#{@image.image}") %> </div>
-<p class="comments">Comments:</p>
+
+<% if @comments.empty? %>
+  <p class="comments-empty">No comments to display!</p>
+<% else %>
+  <p class="comments-label">Comments:</p>
+<% end %>
+
+<% @comments.each do |comment| %>
+  <div class="comment-wrapper">
+      <div class="comment-actions">
+      <% if current_user == comment.user %>
+      <li><%= link_to "Edit Comment", edit_image_comment_path(@image, comment) %></li>
+      <li><%= link_to "Delete Comment", image_comment_path(@image, comment), method: :delete %></li>
+      <% end %>
+    </div>
+    <li><%= comment.user.first_name %> <%= comment.user.last_name %></li>
+    <li><%= comment.body %></li>
+  </div>
+<% end %>
+
+<% if user_signed_in? %>
+  <div class="comment-add"> <%= link_to "Add Comment", new_image_comment_path(@image) %> </div>
+<% end %>

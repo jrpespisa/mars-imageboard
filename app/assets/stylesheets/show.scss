@@ -1,4 +1,5 @@
 @import "foundation_and_overrides";
+$form-border-color: #ee7600;
 
 .page-guide {
   padding-top: 25px;
@@ -35,4 +36,36 @@
   max-height: 100px;
   margin: auto;
   list-style-type: none;
+}
+
+.comments-empty {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.comments-label {
+  padding: 15px 0 0 20px;
+}
+
+.comment-add {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.comment-wrapper {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid $form-border-color;
+  border-radius: 20px;
+
+  li {
+    list-style-type: none;
+    width: 70%;
+  }
+
+  .comment-actions li {
+    float: right;
+    display: inline-block;
+    text-align: right;
+  }
 }
