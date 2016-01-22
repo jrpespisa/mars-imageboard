@@ -21,7 +21,8 @@ class CommentsController < ApplicationController
   def edit
     @comment = Comment.find(params[:id])
     unless @comment.user == current_user
-      raise_error
+      flash[:errors] = @comment.errors.full_messages.join(". ")
+      render :show
     end
     @image = @comment.image
   end

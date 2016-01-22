@@ -32,7 +32,7 @@ feature "user can add comment to a specific image" do
     click_on "Rover_1"
     page.first(".link").click
 
-    expect(page).to have_content "Comments:"
+    expect(page).to have_content "North-facing view of Terra Meridiani"
     expect(page).to_not have_content "Add Comment"
 
   end
