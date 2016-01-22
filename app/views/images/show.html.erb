@@ -2,3 +2,15 @@
 <h4 class="image-title">Photo taken by <%= @image.name %> with the <%= @image.description %> </h4>
 <div class="full-size-image"> <%= image_tag ("#{@image.image}") %> </div>
 <p class="comments">Comments:</p>
+
+<% @comments.each do |comment| %>
+  <%= comment.body %>
+  <% if current_user == comment.user %>
+    <%= link_to "Edit Comment", edit_image_comment_path(@image, comment) %>
+    <%= link_to "Delete Comment", image_comment_path(@image, comment), method: :delete %>
+  <% end %>
+<% end %>
+
+<% if user_signed_in? %>
+  <div> <%= link_to "Add Comment", new_image_comment_path(@image) %> </div>
+<% end %>

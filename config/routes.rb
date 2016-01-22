@@ -4,5 +4,7 @@ Rails.application.routes.draw do
   resources :rovers do
     resources :images, only: [:show]
   end
-  resources :images
+  resources :images do
+    resources :comments, only: [:new, :create, :edit, :update, :destroy]
+  end
 end
