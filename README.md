@@ -1,5 +1,3 @@
-== README
-
 ![Build Status](https://codeship.com/projects/58a3b060-953d-0133-ccd7-4a53072d6648/status?branch=master)
 ![Code Climate](https://codeclimate.com/github/jrpespisa/mars-imageboard.png)
 ![Coverage Status](https://coveralls.io/repos/jrpespisa/mars-imageboard/badge.png)
@@ -26,7 +24,3 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
