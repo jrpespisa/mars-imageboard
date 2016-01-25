@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $(".votes").click(function(event) {
+  $('.votes').click(function(event) {
     event.preventDefault();
 
     var newVote = this.id.split('-')[0];
