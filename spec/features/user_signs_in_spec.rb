@@ -1,12 +1,11 @@
 require 'spec_helper'
 
 feature "user signs in" do
+
+  let!(:user) { FactoryGirl.create(:user) }
+
   scenario "user sign in successful" do
-    user = FactoryGirl.create(:user)
-    visit new_user_session_path
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    click_button "Sign In"
+    user_sign_in
 
     expect(page).to have_content "Welcome back!"
     expect(page).to have_content "Sign Out"
@@ -24,7 +23,6 @@ feature "user signs in" do
   end
 
   scenario "incorrect password denied access" do
-    user = FactoryGirl.create(:user)
     visit new_user_session_path
     fill_in "Email", with: user.email
     fill_in "Password", with: "Nothing"
@@ -36,11 +34,7 @@ feature "user signs in" do
   end
 
   scenario "already signed-in user attempts to sign in again" do
-    user = FactoryGirl.create(:user)
-    visit new_user_session_path
-    fill_in "Email", with: user.email
-    fill_in "Password", with: user.password
-    click_button "Sign In"
+    user_sign_in
 
     expect(page).to have_content "Sign Out"
     expect(page).to_not have_content "Sign In"
@@ -49,4 +43,11 @@ feature "user signs in" do
 
     expect(page).to have_content "You are already signed in."
   end
+end
+
+def user_sign_in
+  visit new_user_session_path
+  fill_in "Email", with: user.email
+  fill_in "Password", with: user.password
+  click_button "Sign In"
 end
