@@ -5,6 +5,7 @@ $form-border-color: #ee7600;
   padding-top: 25px;
 }
 
+.vote-buttons,
 .rover-name,
 .rover-description {
   margin: auto;
@@ -68,4 +69,15 @@ $form-border-color: #ee7600;
     display: inline-block;
     text-align: right;
   }
+
+}
+
+.vote-buttons {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  .votes {
+    display: inline;
+  }
+
 }
