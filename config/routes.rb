@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   end
   resources :images do
     resources :comments, only: [:new, :create, :edit, :update, :destroy]
+    resources :votes, only: [:create]
   end
 end

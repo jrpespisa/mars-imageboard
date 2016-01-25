@@ -3,6 +3,8 @@ require 'rails_helper'
 feature "user can add comment to a specific image" do
 
   before :each do
+    test_seeder
+    sign_in
     comment
   end
 
@@ -45,17 +47,4 @@ feature "user can add comment to a specific image" do
     expect(page).to_not have_content "Here is a test comment"
     expect(page).to have_content "Add Comment"
   end
-end
-
-def comment
-  test_seeder
-  visit new_user_session_path
-  fill_in "Email", with: @user.email
-  fill_in "Password", with: @user.password
-  click_button "Sign In"
-  click_on "Rover_1"
-  page.first(".link").click
-  click_link "Add Comment"
-  fill_in "Comment", with: "Here is a test comment"
-  click_button "Create Comment"
 end

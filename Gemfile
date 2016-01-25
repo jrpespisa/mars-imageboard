@@ -51,6 +51,7 @@ group :development, :test do
 end
 
 group :test do
+  gem 'poltergeist'
   gem "database_cleaner"
   gem 'coveralls', require: false
 end

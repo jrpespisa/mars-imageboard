@@ -22,5 +22,20 @@
 <% end %>
 
 <% if user_signed_in? %>
+  <div class="vote-buttons">
+    <%= button_to pluralize(@image.votes.where(vote: true).count,
+      "Upvote"),
+      image_path(@image),
+      method: 'get',
+      class: 'votes up',
+      id: "upvote-#{@image.id}" %>
+    <%= button_to pluralize(@image.votes.where(vote: false).count,
+      "Downvote"),
+      image_path(@image),
+      method: 'get',
+      class: 'votes down',
+      id: "downvote-#{@image.id}" %>
   <div class="comment-add"> <%= link_to "Add Comment", new_image_comment_path(@image) %> </div>
+  <% else %>
+    <%= link_to "Sign in to vote!", new_user_session_path %>
 <% end %>
