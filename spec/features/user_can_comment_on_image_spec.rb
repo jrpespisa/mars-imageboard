@@ -18,7 +18,7 @@ feature "user can add comment to a specific image" do
     click_on "Sign Out"
     visit root_path
     click_on "Rover_1"
-    page.first(".link").click
+    page.first(".img-link").click
 
     expect(page).to have_content "North-facing view of Terra Meridiani"
     expect(page).to_not have_content "Add Comment"

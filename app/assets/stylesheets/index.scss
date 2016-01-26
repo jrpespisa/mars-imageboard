@@ -1,13 +1,44 @@
 @import "foundation_and_overrides";
 
+.link {
+  color: #999;
+}
+
+.link:hover {
+  color: #777;
+}
+
+.cover-body {
+  color: #222222;
+  padding-top: 10px;
+  text-align: center;
+  background: linear-gradient(transparent, #663300), url(mars_panoramic.jpg);
+  background-size: cover;
+  height: 80%
+}
+
 .return {
   padding-left: 15px;
+}
+
+.rover-body {
+  background-color: #663300;
+
+  h2 {
+    color: #dd7e28;
+  }
+
 }
 
 .rover-body,
 .rover-title {
   margin: auto;
   text-align: center;
+
+  .full-title {
+    color: #dd7e28;
+  }
+
 }
 
 .rover-wrapper {

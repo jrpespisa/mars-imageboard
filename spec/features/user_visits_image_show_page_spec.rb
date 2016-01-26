@@ -8,7 +8,7 @@ feature "user views index page" do
     click_on "Rover_1"
   end
   scenario "user clicks on image and is taken to new show page" do
-    page.first(".link").click
+    page.first(".img-link").click
 
     expect(page).to have_content "North-facing view of Terra Meridiani"
   end

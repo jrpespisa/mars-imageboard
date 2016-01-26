@@ -1,12 +1,12 @@
-<div class="return"> <%= link_to "Home", root_path %> </div>
-<h1 class="rover-name"><%= @rover.name %></h1>
+<div class="return"> <%= link_to "Home", root_path, class: "link" %> </div>
+<h2 class="rover-name"><%= @rover.name %></h2>
 
 <p class="rover-description"><%= @rover.description %></p>
 <div class="page-guide">Click on the thumbnails below to see these images in all their glory!</div>
 <div class="image-body">
   <% @images.each do |image| %>
   <div class="image-wrapper">
-    <li class="image"><%= link_to (image_tag ("#{image.image}")), rover_image_path(@rover, image), class: "link" %></li>
+    <li class="image"><%= link_to (image_tag ("#{image.image}")), rover_image_path(@rover, image), class: "img-link" %></li>
   </div>
   <% end %>
 </div>
