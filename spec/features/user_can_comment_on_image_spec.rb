@@ -11,7 +11,6 @@ feature "user can add comment to a specific image" do
   scenario "user successfully adds comment" do
 
     expect(page).to have_content "Here is a test comment"
-    expect(page).to have_content "Add Comment"
   end
 
   scenario "user cannot add comment if they are not logged in" do
@@ -21,7 +20,6 @@ feature "user can add comment to a specific image" do
     page.first(".img-link").click
 
     expect(page).to have_content "North-facing view of Terra Meridiani"
-    expect(page).to_not have_content "Add Comment"
 
   end
   scenario "user cannot visit the url path for new comment without signing in" do
@@ -38,13 +36,11 @@ feature "user can add comment to a specific image" do
     click_button "Update"
 
     expect(page).to have_content "This is a different comment"
-    expect(page).to have_content "Add Comment"
   end
 
   scenario "user can delete their own comment" do
     click_on "Delete Comment"
 
     expect(page).to_not have_content "Here is a test comment"
-    expect(page).to have_content "Add Comment"
   end
 end

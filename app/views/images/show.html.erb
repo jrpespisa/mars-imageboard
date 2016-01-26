@@ -18,9 +18,8 @@
       class: 'votes down tiny button',
       id: "downvote-#{@image.id}" %>
   </div>
-  <div class="comment-add"> <%= link_to "Add Comment", new_image_comment_path(@image), class: "link" %> </div>
   <% else %>
-    <%= link_to "Sign in to vote!", new_user_session_path, class: "link" %>
+    <%= link_to "Sign in to vote and comment!", new_user_session_path, class: "link" %>
 <% end %>
 
 <% if @comments.empty? %>
@@ -40,4 +39,21 @@
   <li><%= comment.user.first_name %> <%= comment.user.last_name %></li>
   <li><%= comment.body %></li>
 </div>
+<% end %>
+
+<% if user_signed_in? %>
+  <h2>New Comment</h2>
+  <div class="row">
+    <div class="small-6 small-centered columns border">
+      <%= form_for [@image, @comment] do |f| %>
+      <div class="form-inputs">
+        <%= f.label :body, "Comment" %>
+        <%= f.text_area :body %>
+      </div>
+      <div class="form-actions">
+        <%= f.submit class: "small button form-button" %>
+      </div>
+      <% end %>
+    </div>
+  </div>
 <% end %>

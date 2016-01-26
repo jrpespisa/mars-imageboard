@@ -24,7 +24,6 @@ module TestHelpers
   def comment
     page.first(".full-title").click
     page.first(".img-link").click
-    click_on "Add Comment"
     fill_in "Comment", with: "Here is a test comment"
     click_button "Create Comment"
   end
