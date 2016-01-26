@@ -10,7 +10,7 @@ feature "user can upvote or downvote images" do
   scenario "user successfully votes on an image", js: true do
     skip("come back to this later - feature works")
     click_on "Rover_1"
-    page.first(".link").click
+    page.first(".img-link").click
     click_on "0 Upvotes"
 
     expect(page).to have_content "1 Upvote"
@@ -20,7 +20,7 @@ feature "user can upvote or downvote images" do
   scenario "user can change a previous vote", js: true do
     skip("come back to this later - feature works")
     click_on "Rover_1"
-    page.first(".link").click
+    page.first(".img-link").click
     click_on "0 Upvotes"
     click_on "0 Downvotes"
 
@@ -31,7 +31,7 @@ feature "user can upvote or downvote images" do
   scenario "user cannot see votes if they are not logged in" do
     click_on "Sign Out"
     click_on "Rover_1"
-    page.first(".link").click
+    page.first(".img-link").click
 
     expect(page).to_not have_content "0 Upvotes"
     expect(page).to_not have_content "0 Downvotes"
@@ -41,7 +41,7 @@ feature "user can upvote or downvote images" do
   scenario "user cannot vote more than once", js: true do
     skip("come back to this later - feature works")
     click_on "Rover_1"
-    page.first(".link").click
+    page.first(".img-link").click
     click_on "0 Upvotes"
     click_on "1 Upvote"
 

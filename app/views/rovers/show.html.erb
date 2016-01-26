@@ -6,7 +6,7 @@
 <div class="image-body">
   <% @images.each do |image| %>
   <div class="image-wrapper">
-    <li class="image"><%= link_to (image_tag ("#{image.image}")), rover_image_path(@rover, image), class: "link" %></li>
+    <li class="image"><%= link_to (image_tag ("#{image.image}")), rover_image_path(@rover, image), class: "img-link" %></li>
   </div>
   <% end %>
 </div>
