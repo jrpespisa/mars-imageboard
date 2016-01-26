@@ -1,9 +1,11 @@
+<div class="cover-body"></div>
 <div class="rover-body">
+  <h2>Choose a Rover</h2>
   <% @rovers.each do |rover| %>
   <div class="rover-wrapper">
     <li class="rover-image"><%= link_to (image_tag "#{rover.image_url}"), rover_path(rover) %></li>
     <li class="rover-title">
-      <%= link_to "#{rover.name} ", rover_path(rover) %>
+      <%= link_to "#{rover.name} ", rover_path(rover), class: "full-title" %>
     </li>
   </div>
   <% end %>

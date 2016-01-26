@@ -1,4 +1,4 @@
-<div class="return"> <%= link_to "Back to #{@image.rover.name} images", rover_path(@image.rover) %> </div>
+<div class="return"> <%= link_to "Back to #{@image.rover.name} images", rover_path(@image.rover), class: "link" %> </div>
 <h4 class="image-title">Photo taken by <%= @image.name %> with the <%= @image.description %> </h4>
 <div class="full-size-image"> <%= image_tag ("#{@image.image}") %> </div>
 
@@ -18,9 +18,9 @@
       class: 'votes down tiny button',
       id: "downvote-#{@image.id}" %>
   </div>
-  <div class="comment-add"> <%= link_to "Add Comment", new_image_comment_path(@image) %> </div>
+  <div class="comment-add"> <%= link_to "Add Comment", new_image_comment_path(@image), class: "link" %> </div>
   <% else %>
-    <%= link_to "Sign in to vote!", new_user_session_path %>
+    <%= link_to "Sign in to vote!", new_user_session_path, class: "link" %>
 <% end %>
 
 <% if @comments.empty? %>
@@ -33,8 +33,8 @@
 <div class="comment-wrapper">
   <div class="comment-actions">
     <% if current_user == comment.user %>
-    <li><%= link_to "Edit Comment", edit_image_comment_path(@image, comment) %></li>
-    <li><%= link_to "Delete Comment", image_comment_path(@image, comment), method: :delete %></li>
+    <li><%= link_to "Edit Comment", edit_image_comment_path(@image, comment), class: "link" %></li>
+    <li><%= link_to "Delete Comment", image_comment_path(@image, comment), class: "link", method: :delete %></li>
     <% end %>
   </div>
   <li><%= comment.user.first_name %> <%= comment.user.last_name %></li>
