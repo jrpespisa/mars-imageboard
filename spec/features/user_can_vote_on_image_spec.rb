@@ -35,7 +35,7 @@ feature "user can upvote or downvote images" do
 
     expect(page).to_not have_content "0 Upvotes"
     expect(page).to_not have_content "0 Downvotes"
-    expect(page).to have_content "Sign in to vote!"
+    expect(page).to have_content "Sign in to vote and comment!"
   end
 
   scenario "user cannot vote more than once", js: true do

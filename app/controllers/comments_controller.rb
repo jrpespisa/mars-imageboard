@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   def new
     @image = Image.find(params[:image_id])
     @comment = Comment.new
+    @comments = @image.comments
   end
 
   def create
@@ -14,7 +15,7 @@ class CommentsController < ApplicationController
       redirect_to image_path(@image)
     else
       flash[:errors] = @comment.errors.full_messages.join(". ")
-      render :new
+      render :show
     end
   end
 
