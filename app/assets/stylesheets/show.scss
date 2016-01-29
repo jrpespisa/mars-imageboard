@@ -40,6 +40,11 @@ $form-border-color: #ee7600;
   list-style-type: none;
 }
 
+.sign-in-request {
+  margin-left: 100px;
+  margin: 0 auto;
+}
+
 .comments-empty {
   padding-top: 15px;
   text-align: center;
@@ -59,10 +64,15 @@ $form-border-color: #ee7600;
   padding: 20px;
   border: 2px solid $form-border-color;
   border-radius: 20px;
+  background-color: #333;
 
   li {
     list-style-type: none;
     width: 70%;
+  }
+
+  #username {
+    text-decoration: underline;
   }
 
   .comment-actions li {

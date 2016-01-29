@@ -19,7 +19,7 @@
       id: "downvote-#{@image.id}" %>
   </div>
   <% else %>
-    <%= link_to "Sign in to vote and comment!", new_user_session_path, class: "link" %>
+    <%= link_to "Sign in to vote and comment!", new_user_session_path, class: "link", id: "sign-in-request" %>
 <% end %>
 
 <% if @comments.empty? %>
