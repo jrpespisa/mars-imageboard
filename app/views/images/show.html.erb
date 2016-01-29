@@ -19,7 +19,7 @@
       id: "downvote-#{@image.id}" %>
   </div>
   <% else %>
-    <%= link_to "Sign in to vote and comment!", new_user_session_path, class: "link", id: "sign-in-request" %>
+    <div id="sign-in-request"><%= link_to "Sign in to vote and comment!", new_user_session_path, class: "link"%></div>
 <% end %>
 
 <% if @comments.empty? %>
@@ -27,7 +27,7 @@
 <% end %>
 
 <div class="comment-box">
-  <% @comments.each do |comment| %>
+  <% @comments.each_with_index do |comment, index| %>
   <div class="comment-wrapper" comment-id="<%= comment.id %>">
     <div class="comment-actions">
       <% if current_user == comment.user %>
@@ -37,6 +37,7 @@
     </div>
     <li class="name", id="username"><%= comment.user.first_name %> <%= comment.user.last_name %></li>
     <li class="body", id="comment-body"><%= comment.body %></li>
+    <li class="timestamp" id="timestamp[<%= index %>]"> <%=comment.user.created_at%> </li>
   </div>
   <% end %>
 </div>
