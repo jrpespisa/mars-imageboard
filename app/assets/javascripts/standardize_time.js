@@ -18,7 +18,6 @@ var newTime = standardizeTime();
 
 var appendTimeStamps = function() {
   for (var i = 0; i < newTime.length; i++) {
-    debugger;
     newTime[i].toString();
     $("#timestamp[" + i + "]").append(newTime[i]);
   };

@@ -43,7 +43,7 @@ $(document).ready(function() {
           "</div>" +
           "<li id='username'>" + name + "</li>" +
           "<li>" + body + "</li>" +
-          "<li class='timestamp'>" + timestamp() + "</li>" +
+          // "<li class='timestamp'>" + timestamp() + "</li>" +
         "</div>";
         commentAppender(styleComment);
       });

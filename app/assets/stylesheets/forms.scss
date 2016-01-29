@@ -5,10 +5,16 @@ h2 {
   text-align: center;
 }
 
+.simple_form {
+  align-content: center;
+  margin: 0 auto;
+}
+
 .form-actions,
 .form-inputs {
-  width: 100%;
+  width: 75%;
   padding: 10px;
+  margin: 0 auto;
 }
 
 .form-inputs {
@@ -18,4 +24,9 @@ h2 {
 
 .form-actions {
   text-align: center;
+}
+
+.cancel-wrapper {
+  width: 75%;
+  margin: 0 auto;
 }
