@@ -26,6 +26,11 @@ $(document).ready(function() {
         };
 
         var commentsLabel = "<div class='comments-label'>Comments:</div>"
+        var timestamp = function() {
+          var dateJSON = response.comment.created_at
+          var date = new Date(dateJSON);
+          return date;
+        };
         var name = response.user.first_name + " " + response.user.last_name
         var body = formInfo.comment_body
         var edit = "/images/" + formInfo.image_id + "/comments/" + response.id + "/edit"
@@ -36,8 +41,9 @@ $(document).ready(function() {
             "<li>" + "<a class='link'" + "href=" + edit + ">" + "Edit Comment" + "</a>" + "</li>" +
               "<li>" + "<a data-method='delete'" + "class='link delete-comment'" + "href=" + destroy + ">" + "Delete Comment" + "</a>" + "</li>" +
           "</div>" +
-          "<li>" + name + "</li>" +
+          "<li id='username'>" + name + "</li>" +
           "<li>" + body + "</li>" +
+          "<li class='timestamp'>" + timestamp() + "</li>" +
         "</div>";
         commentAppender(styleComment);
       });

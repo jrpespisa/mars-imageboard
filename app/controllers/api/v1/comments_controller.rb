@@ -6,7 +6,8 @@ class Api::V1::CommentsController < ActionController::Base
     if comment.save
       render json: {
         id: comment.id,
-        user: current_user,
+        comment: comment,
+        user: current_user
       }
     else
       render json: :nothing, status: :not_found
