@@ -11,6 +11,4 @@ README
   Red Planet is a basic image board where space exploration enthusiasts view
 images taken by the three Martian Rovers (Spirit, Curiosity, and Opportunity).
 Users can comment on images as well as vote on them. The images were obtained
-using the [https://github.com/chrisccerami/mars-photo-api][Mars Rover Photo API.]
-
-###Features:
+using the [Mars Rover Photo API](https://github.com/chrisccerami/mars-photo-api).
